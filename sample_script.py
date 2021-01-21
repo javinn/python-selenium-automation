@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 # init driver
 driver = webdriver.Chrome(executable_path="C:\\bin\chromedriver")
 # Actually no need at this place to explicitly define executable_path
-# Because the folder "C:\bin" was added to the PATH environm ent variable
+# , because the folder "C:\bin" was added to the PATH environment variable
 
 driver.maximize_window()
 
