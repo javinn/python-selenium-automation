@@ -5,12 +5,12 @@ def browser_init(context):
     """
     :param context: Behave context
     """
-    context.driver = webdriver.Chrome()
+    context.chrome_instance = webdriver.Chrome()
     # context.browser = webdriver.Safari()
     # context.browser = webdriver.Firefox()
 
-    context.driver.maximize_window()
-    context.driver.implicitly_wait(4)
+    context.chrome_instance.maximize_window()
+    context.chrome_instance.implicitly_wait(4)
 
 
 def before_scenario(context, scenario):
@@ -28,5 +28,5 @@ def after_step(context, step):
 
 
 def after_scenario(context, feature):
-    context.driver.delete_all_cookies()
-    context.driver.quit()
+    context.chrome_instance.delete_all_cookies()
+    context.chrome_instance.quit()
