@@ -13,7 +13,7 @@ chrome_instance.get('https://www.amazon.com/gp/help/customer/display.html')
 
 chrome_instance.maximize_window()
 
-
+sleep(4)
 
 search_help_library_field = chrome_instance.find_element(By.ID, 'helpsearch')
 search_help_library_field.send_keys('Cancel order', Keys.ENTER)
