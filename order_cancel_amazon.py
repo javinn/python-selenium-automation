@@ -24,7 +24,7 @@ expected_text = "Cancel Items or Orders"
 
 actual_text = chrome_instance.find_element(By.XPATH, '//div[@class="help-content"]/h1').text
 
-assert expected_text in actual_text, print(f'expected "{expected_text}" but got "{actual_text}"')
+assert expected_text in actual_text, f'expected "{expected_text}" but got "{actual_text}"'
 
 
 chrome_instance.quit()
