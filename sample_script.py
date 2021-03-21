@@ -17,13 +17,13 @@ search.clear()
 search.send_keys('Dress')
 
 # wait for 4 sec
-sleep(4)
-
+# sleep(4)
+driver.implicitly_wait(4)
 # click search
 driver.find_element(By.NAME, 'btnK').click()
 
 # verify
-assert 'Dress' in driver.find_element(By.XPATH, "//div[contains(@class,'commercial-unit-desktop-top')]").text
+# assert 'Dress' in driver.find_element(By.XPATH, "//div[contains(@class,'commercial-unit-desktop-top')]").text
 assert 'Dress' in driver.find_element(By.XPATH, "//div[@class='g']").text
 
 driver.quit()

@@ -2,7 +2,7 @@
 
 from behave import given, when, then
 from selenium.webdriver.common.by import By
-from time import sleep
+# from time import sleep
 
 
 SHOPPING_CART = (By.ID, 'nav-cart-count-container')
@@ -16,8 +16,9 @@ def open_amazon_page(context):
 
 @when('Click on Shopping Cart')
 def click_shopping_cart(context):
+    context.chrome_instance.implicitly_wait(4)
     context.chrome_instance.find_element(*SHOPPING_CART).click()
-    sleep(4)
+    # sleep(4)
 
 @then('Verify Shopping Cart is empty')
 def verify_cart_status_empty(context):
@@ -37,23 +38,27 @@ CART_ITEM = (By.CSS_SELECTOR, 'div.a-row.a-spacing-base.a-spacing-top-base')
 
 @when('User opens Bestsellers')
 def open_bestsellers(context):
+    context.chrome_instance.implicitly_wait(2)
     context.chrome_instance.find_element(*BESTSELLERS).click()
-    sleep(2)
+    # sleep(2)
 
 @when('User opens Bestseller Books')
 def open_bestseller_books(context):
+    context.chrome_instance.implicitly_wait(2)
     context.chrome_instance.find_element(*BESTSELLER_BOOKS).click()
-    sleep(2)
+    # sleep(2)
 
 @when('User opens the Top Bestseller')
 def open_top_bestseller(context):
+    context.chrome_instance.implicitly_wait(2)
     context.chrome_instance.find_elements(*TOP_BESTSELLER)[0].click()
-    sleep(2)
+    # sleep(2)
 
 @when('User adds to Cart')
 def add_to_cart(context):
+    context.chrome_instance.implicitly_wait(2)
     context.chrome_instance.find_element(*ADD_TO_CART).click()
-    sleep(2)
+    # sleep(2)
 
 @then('Verify Shopping Cart has exact {number} Item(s)')
 def verify_number_of_items(context, number):

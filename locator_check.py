@@ -90,7 +90,7 @@ chrome_instance.maximize_window()
 
 input_check = chrome_instance.find_element(By.CSS_SELECTOR, 'input#ap_email')
 input_check.send_keys('blablabla', Keys.ENTER)
-sleep(4)
+# sleep(4)
 
 
 

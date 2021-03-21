@@ -11,3 +11,4 @@ Feature: Test Scenarios for Amazon Bestsellers Page
     Given Open Amazon Main page
     When User opens Bestsellers
     Then Verify number of links is 5
+    And Click on Bestsellers
