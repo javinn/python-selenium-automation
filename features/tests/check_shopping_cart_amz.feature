@@ -1,10 +1,11 @@
 # Created by JM at 2/2/2021
 
 #  Homework 3-3
+#  Homework 7-1
 
 Feature: Test Scenarios for Amazon Shopping Cart
 
-  Scenario:  is empty
+  Scenario: User checks if Shopping Cart is empty
     Given Open Amazon Main page
     When Click on Shopping Cart
     Then Verify Shopping Cart is empty
@@ -12,6 +13,7 @@ Feature: Test Scenarios for Amazon Shopping Cart
 
 
 #  Homework 3-4
+#  Homework 7-2
 
   Scenario: User checks Shopping Cart
     Given Open Amazon Main page
@@ -20,4 +22,4 @@ Feature: Test Scenarios for Amazon Shopping Cart
     And User opens the Top Bestseller
     And User adds to Cart
     And Click on Shopping Cart
-    Then Verify Shopping Cart has exact 1 Item(s)
+    Then Verify Shopping Cart has exact one Item

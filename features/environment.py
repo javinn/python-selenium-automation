@@ -1,5 +1,5 @@
 from selenium import webdriver
-
+from app.application import Application
 
 def browser_init(context):
     """
@@ -11,6 +11,8 @@ def browser_init(context):
 
     context.chrome_instance.maximize_window()
     context.chrome_instance.implicitly_wait(4)
+
+    context.app = Application(context.chrome_instance)
 
 
 def before_scenario(context, scenario):
